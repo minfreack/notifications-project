@@ -75,18 +75,32 @@ const Register = () => {
         <PrivateRoute>
             <div className="py-10 px-4 md:px-20 bg-blue-100 h-screen w-screen">
                 <div className="container py-6 px-6 bg-white rounded-md shadow-lg relative">
-                    <p onClick={() => navigate('/login')}  className="absolute top-4 right-6 text-sm cursor-pointer text-blue-500">Iniciar sesión</p>
-                    <h1 className="text-xl pb-6">Registro</h1>
+                    <h1 className="text-xl font-semibold pb-6">Registro</h1>
                     <form onSubmit={onSubmit} className="flex flex-col gap-y-4">
                         <div className="flex flex-col gap-2">
-                            <label className="text-sm" htmlFor="email">Correo electrónico</label>
-                            <input onChange={handleChange} value={formValues?.email} type="email" name="email" id="email" className="border border-gray-300 rounded-md p-2"/>
+                        <label className="text-sm font-medium" htmlFor="email">Correo electrónico</label>
+                            <input 
+                            onChange={handleChange} 
+                            value={formValues?.email} 
+                            type="email" 
+                            name="email"
+                            placeholder="Ingresa tu email..."
+                            id="email" 
+                            className="border border-gray-200 rounded-md px-3 py-4 text-sm"/>
                         </div>
                         <div className="flex flex-col gap-2">
-                            <label className="text-sm" htmlFor="password">Contraseña</label>
-                            <input onChange={handleChange} value={formValues?.password} type="password" name="password" id="password" className="border border-gray-300 rounded-md p-2"/>
+                        <label className="text-sm font-medium" htmlFor="password">Contraseña</label>
+                            <input 
+                            onChange={handleChange} 
+                            value={formValues?.password} 
+                            type="password" 
+                            name="password"
+                            placeholder="Ingresa tu contraseña..." 
+                            id="password" 
+                            className="border border-gray-200 rounded-md px-3 py-4 text-sm"/>
                         </div>
-                        <button className="bg-blue-500 text-white py-2 rounded-md">Registrarme</button>
+                        <button className="bg-blue-500 text-white px-2 py-4 font-medium rounded-lg">Registrarme</button>
+                        <p className="text-sm inline-flex items-center">Ya tienes una cuenta? <b className="pl-2 text-sm cursor-pointer text-blue-500" onClick={() => navigate('/login')}>Inicia sesión</b></p>
                     </form>
                 </div>
             </div>

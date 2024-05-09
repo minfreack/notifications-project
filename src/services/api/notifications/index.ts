@@ -6,7 +6,7 @@ type NewNotification = {
 }
 
 export const newNotification = async(data : NewNotification) => {
-    const res = await fetch(`${url}/v1/notifications/notification-new`,{
+    const res = await fetch(`${url}/v1/notifications/notification`,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -15,7 +15,8 @@ export const newNotification = async(data : NewNotification) => {
     });
     const resData = await res.json();
     return {
-        data: resData
+        data: resData.data,
+        success: resData.success
     }
 }
 
@@ -34,7 +35,7 @@ export const getNotifications = async(id: string) => {
 }
 
 export const readNotification = async(id: string) => {
-    const res = await fetch(`${url}/v1/notifications/notification-read`,{
+    const res = await fetch(`${url}/v1/notifications/notification`,{
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
