@@ -16,8 +16,7 @@ interface SocketProviderProps {
 
 export const SocketContext = createContext<SocketContextType>({socket: null, online: false});
 
-// const url = process.env.NEXT_PUBLIC_API_URL
-const url = 'http://localhost:8080'
+const url = import.meta.env.VITE_API_URL
 export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
 
     const {socket, online, connectarSocket, desconectarSocket} = useSocket(url);
