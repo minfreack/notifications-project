@@ -89,7 +89,7 @@ const Login = () => {
                             name="email"
                             placeholder="Ingresa tu email..."
                             id="email" 
-                            className="border border-gray-200 rounded-md px-3 py-4 text-sm"/>
+                            className="border border-gray-200 rounded-md px-3 py-4 text-sm duration-300 hover:duration-300 hover:border-gray-400"/>
                         </div>
                         <div className="flex flex-col gap-2">
                             <label className="text-sm font-medium" htmlFor="password">Contraseña</label>
@@ -100,7 +100,7 @@ const Login = () => {
                             name="password" 
                             placeholder="Ingresa tu contraseña..."
                             id="password" 
-                            className="border border-gray-200 rounded-md px-3 py-4 text-sm"/>
+                            className="border border-gray-200 rounded-md px-3 py-4 text-sm duration-300 hover:duration-300 hover:border-gray-400"/>
                         </div>
                         <button className="bg-blue-500 text-white px-2 py-4 font-medium rounded-lg">Iniciar sesión</button>
                         <p className="text-sm inline-flex items-center">¿No tienes una cuenta? <b className="pl-2 text-sm cursor-pointer text-blue-500" onClick={() => navigate('/register')}>Regístrate</b></p>

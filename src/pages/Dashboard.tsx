@@ -112,11 +112,11 @@ const Dashboard = () => {
                             name="description"
                             placeholder="Ingresa el texto a enviar"
                             id="description" 
-                            className="border border-gray-200 rounded-md px-3 py-4 text-sm"/>
+                            className="border border-gray-200 rounded-md px-3 py-4 text-sm duration-300 hover:duration-300 hover:border-gray-400"/>
                         )
                     }
-                        <button disabled={userAuth?.auth?.uid === undefined || loading} onClick={onNewNotification} className="bg-blue-500 px-2 py-3 rounded-lg text-white disabled:bg-gray-300" type="button">Mandar notificación</button>
-                        <button disabled={userAuth?.auth?.uid === undefined || loading} onClick={onNewAllNotification} className="bg-blue-500 px-2 py-3 rounded-lg text-white disabled:bg-gray-300" type="button">Mandar notificación a todos</button>
+                        <button disabled={userAuth?.auth?.uid === undefined || loading} onClick={onNewNotification} className="bg-blue-500 px-2 py-3 rounded-lg text-white disabled:bg-gray-300 duration-300 hover:duration-300 hover:bg-blue-700" type="button">Mandar notificación</button>
+                        <button disabled={userAuth?.auth?.uid === undefined || loading} onClick={onNewAllNotification} className="bg-blue-500 px-2 py-3 rounded-lg text-white disabled:bg-gray-300 duration-300 hover:duration-300 hover:bg-blue-700" type="button">Mandar notificación a todos</button>
                     </div>
                 </div>
             </div>
