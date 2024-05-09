@@ -73,7 +73,7 @@ const Register = () => {
 
     return (
         <PrivateRoute>
-            <div className="py-10 px-20 bg-blue-100 h-screen w-screen">
+            <div className="py-10 px-4 md:px-20 bg-blue-100 h-screen w-screen">
                 <div className="container py-6 px-6 bg-white rounded-md shadow-lg relative">
                     <p onClick={() => navigate('/login')}  className="absolute top-4 right-6 text-sm cursor-pointer text-blue-500">Iniciar sesión</p>
                     <h1 className="text-xl pb-6">Registro</h1>
